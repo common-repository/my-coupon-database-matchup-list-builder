@@ -1,0 +1,82 @@
+/* WordPress Over-Ride Styles */
+#message { display: none; }
+#message ul { color: #CC0000; padding: 5px 0 0 0; }
+#message ul li { list-style: disc inside;}
+.wrap { margin-bottom: 150px; }
+.postbox h3 { cursor: pointer; }
+pre.mcd_cl_code { padding: 20px; }
+.mcd_cl_admin_list { list-style: disc outside; padding: 0 0 0 20px; }
+
+/* General Styles */
+#mcd_cl_container { font-size: 14px; }
+.dateColor { color: #777; }
+.mcd_cl_lightGrey { color: #777; }
+.mcd_cl_red { color: #BC0B0B; }
+.mcd_cl_blue { color: blue; }
+.mcd_cl_redLink { color: #BC0B0B; text-decoration: none; }
+.mcd_cl_redLink:hover { color: #D54E21; }
+.mcd_cl_redLinkBold { color: #BC0B0B; text-decoration: none; font-weight: bold; }
+.mcd_cl_blueLink { text-decoration: none; color: #21759B; }
+.mcd_cl_blueLink:hover { color: #D54E21; }
+a.mcd_cl_greyLink { color: #989898; text-decoration: none; }
+a.mcd_cl_greyLink:active { color: #989898; }
+.noStrong { display: inline; font-weight: normal; }
+.normal { font-weight: normal; }
+
+/* Manage Coupon Lists Page */
+.mcd_cl_list_shortcode_span { font-size: 12px; color: #222; background: #EEE; padding: 5px; font-weight: normal; }
+.mcd_cl_list_created_span { font-size: 12px; color: #999; font-weight: normal; }
+.mcd_cl_list_savedtext_span { font-size: 12px; color: #21759B; font-weight: normal; }
+.mcd_cl_list_save_date_span { font-size: 12px; color: #999; font-weight: normal; }
+.mcd_cl_list_export { font-size: 12px; font-weight: normal; }
+.deleteList { display: none; padding: 10px 0 0 0; }
+#my_lists li { padding: 4px; font-size: 14px; }
+#my_lists li:hover { background: #EFEFEF; }
+.couponHeaderList li label { display: inline-block; width: 95px; }
+.couponHeaderList textarea { width: 350px; }
+.searchInput { font-size: 16px; }
+.searchResults { display: none; background: #F9F9F9; }
+.addCouponsContainer { display: none; margin: 5px 0 0 0; border: 1px dashed #DDD; background: #f0f0f0; padding: 10px; }
+.couponRecords { font-weight: normal; }
+.addYourOwnCouponContainer { display: none; margin: 0 0 0 0; }
+.headerLine { margin: 0; font-size: 14px; background: #eee; padding: 10px; }
+
+.addYourOwnCouponFormList { padding: 5px 0 0 0; }
+.addYourOwnCouponFormList li { line-height: 20px; }
+.addYourOwnCouponFormList li label { display: inline-block; width: 150px; }
+.addYourOwnCouponFormList li input[type='text'] { width: 200px; }
+.couponsAdded { margin: 10px 0 10px 20px; }
+.couponsAdded li { list-style: disc outside; }
+.editNetPriceContainer { display: none; margin: 5px 0 0 0; padding: 5px; border: 1px dashed #DDD; background: #EFEFEF; }
+.netPriceHeader { font-size: 12px; }
+.searchResults h5 { padding: 7px; }
+.headerContentContainer { padding: 10px 0 0 0; }
+.multipleHeaders { display: none; }
+.mcd_cl_coupon_notes { color: #989898; }
+
+/* Manage Coupon Lists Page */
+.couponCatsList li { padding: 5px 5px 5px 30px; border: 1px dashed #DDD; margin: 0 0 10px 0; cursor: move; background: #EFEFEF url('../images/arrow-move.png') no-repeat 4px 4px; }
+.mcd_cl_savedListNotification { display: none; background: #FFFBCC; border: 1px solid #E6DB55; padding: 5px; }
+.mcd_cl_renameCategoryContainer { display: none; }
+.mcd_cl_jquery_inline_div { display: inline; width: 500px; }
+.mcd_cl_save_order_submit_container { padding: 10px 0 10px 0; overflow: hidden; }
+
+/* Manage Coupon Lists - Edit Header */
+.editHeaderContainer { display: none; margin: 5px 0 0 0; padding: 5px; border: 1px dashed #DDD; background: #EFEFEF; }
+.editHeaderContainer ul li label { display: inline-block; width: 100px; }
+.editHeaderContainer ul li textarea { width: 350px; }
+
+/* Settings Page Styles */
+.settings_form { padding: 0 0 20px 0; }
+.settings_form label { display: block; font-weight: bold; padding: 0 0 3px 0; }
+
+/* Categories Page Styles */
+#mcd_cl_category_groups .inside { display: none; }
+#deleteGroupContainer { text-align: right; padding: 0 0 0 0; }
+.groupsExpandCollapse { padding: 0 0 0 10px; }
+.mcd_cl_update_cat_description_link { text-decoration: none; }
+.mcd_cl_cat_description_container { display: none; }
+.couponCatsList input[type='button'] { cursor: pointer; }
+
+/* Import Page Styles */
+.mcd_cl_file_upload_errors { list-style: disc inside; }

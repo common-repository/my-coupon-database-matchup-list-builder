@@ -1,0 +1,135 @@
+/*******
+Name: Custom CSS Styles for MyCouponDatabase.com Coupon List Plugin
+Info: These css settings allow you to add your own custom styling to the display of coupon lists on your site.
+Version: 1.0
+Notes: *IMPORTANT* - If you have a css selector that has higher specificity than these
+css classes, the higher specificty will be used.
+
+For example, if you have a class in your style.css file for your theme of
+ ".wrapper input" and the output of your plugin loads within a container 
+such as <div class="wrapper"></div>, here are some scenarios:
+
+Scenario 1:
+.wrapper input { background: #f00; } - Higher Specificty
+.mcd_cl_headerCheckbox { background: #000; } - Lower Specificty
+Outcome: The background color chosen would be #f00.
+
+Scenario 2:
+.wrapper input { background: #f00; } - Lower Specificty
+.wrapper input.mcd_cl_headerCheckbox { background: #000; } - Higher Specificty
+Outcome: The background color chosen would be #000.
+
+So with Scenario 2, you can see by adding .wrapper input to the pre-built class
+for this plugin, the plugin class now has higher specificty.
+
+To make this easier, use the plugin Firebug for Firefox browser.
+******/
+/**********************
+Full List Page Styling
+**********************/
+.mcd_cl_img_align { vertical-align: middle; }
+
+/* Coupon Container */
+.mcd_cl_container { font-size: 12px !important; padding: 0 0 20px 0 !important; }
+
+/* Header Container */
+.mcd_cl_headerContainer { margin: 0 0 10px 0 !important; }
+
+/* Category Styling */
+.mcd_cl_CategoryName { font-size: 16px !important; padding: 0 0 5px 0 !important; border-bottom: 1px solid #666 !important; margin: 0 0 10px 0 !important; }
+
+/* Coupon Header Styling */
+.mcd_cl_container input[type='checkbox'] { width: auto !important; }
+.mcd_cl_headerLine { margin: 0 0 0 0 !important; padding: 0 !important; }
+.mcd_cl_headerName { font-weight: bold !important; }
+.mcd_cl_headerValue { padding: 0 0 0 0 !important; }
+.mcd_cl_moreInfoText { }
+
+/* Coupon List Styling */
+ul.mcd_cl_couponsAddedList { margin: 0 0 0 0 !important; padding: 0 !important; }
+ul.mcd_cl_couponsAddedList li { line-height: 20px !important; list-style: none !important; margin: 0 !important; }
+
+/* Coupoin Styling */
+.mcd_cl_couponStore { font-style: italic !important; }
+.mcd_cl_couponName { }
+.mcd_cl_couponValue { color: blue !important; }
+.mcd_cl_couponExpiration { color: red !important; }
+.mcd_cl_couponSource { color: #666 !important; }
+.mcd_cl_couponNetPrice { color: blue !important; padding: 0 0 10px 0 !important; }
+.mcd_cl_printURL { }
+.mcd_cl_printURL:hover { }
+
+/* Submit Button */
+.mcd_cl_submitButtton { }
+
+/* Select All Coupons */
+.mcd_cl_select_all_coupons_container { margin: 0 !important; list-style: none !important; overflow: hidden !important; padding: 0 0 10px 0 !important; }
+.mcd_cl_select_all_coupons_container li { 
+	float: left !important; padding: 0 0 0 10px !important; margin: 0 0 0 10px !important; border-left: 1px solid #C0C0C0 !important; 
+	list-style: none !important;
+}
+.mcd_cl_select_all_coupons_container li:first-child { padding: 0 !important; margin: 0 !important; border: none !important; }
+.mcd_cl_select_all { }
+.mcd_cl_unselect_all { }
+/**********************
+MCD Coupon List Panel
+**********************/
+#mcd_list_container {
+	position: fixed; z-index: 20000; top: 50px; width: 500px; height: 500px; overflow: hidden; 
+	/* -466px to hide it */
+}
+.mcd_list_container_show { right: 0; }
+.mcd_list_container_hide { right: -466px; }
+	#mcd_list_tab { 
+		float: left; display: block; width: 36px; height: 180px; position: relative; z-index: 10; 
+	}
+	.mcd_list_tab_show { background: url('../images/list-tab-expanded.png') no-repeat; }
+	.mcd_list_tab_hide { background: url('../images/list-tab-collapsed.png') no-repeat; }
+	#mcd_list_coupons {
+		float: left; background: #555; border: 2px solid #000; width: 442px; height: 476px; border-right: none; margin: 0 0 0 -2px; color: #fff;
+		padding: 10px; font-size: 12px;
+	}
+		#mcd_list_panel_nav { overflow: hidden; }
+		#mcd_list_functions_left, #mcd_list_functions_right { overflow: hidden; list-style: none; margin: 0; font-size: 14px; padding: 0 0 20px 0; }
+		#mcd_list_functions_left { float: left; }
+		#mcd_list_functions_right { float: right; }
+			#mcd_list_functions_left li, #mcd_list_functions_right li { float: left; padding: 0 20px 0 0; }
+				#mcd_list_functions_left li a, #mcd_list_functions_right li a  { display: block; width: 32px; height: 32px; }
+				#mcd_list_print_coupons a { background: url('../images/print_icon.png') no-repeat; }
+				#mcd_list_clear_list a { background: url('../images/clear_list_icon.png') no-repeat; }
+				#mcd_list_minimize_panel a { background: url('../images/minimize_icon.png') no-repeat; }
+		#mcd_list_my_selected_coupons { font-size: 14px; padding: 0 0 5px 0; }
+		.mcd_list_added_coupons { list-style: none; overflow: hidden; height: 365px; margin: 0 0 5px 0; }
+			.mcd_list_added_coupons li { border-bottom: 1px solid #777; padding: 0 0 5px 0; margin: 0 0 5px 0; }
+				.mcd_list_added_coupons li a.mcd_list_remove_coupon { color: #fd2525; }
+		#panel_scroll_buttons { display: none; list-style: none; margin: 0; padding: 0; overflow: hidden; }
+			#panel_scroll_buttons li { float: left; padding: 0 5px 0 0; }
+				#mcd_panel_scroll_up, #mcd_panel_scroll_down { 
+					border: 1px solid #333; background: #eee;
+					-moz-border-radius: 20px; -webkit-border-radius: 20px; -khtml-border-radius: 20px; border-radius: 20px;
+				}
+				
+#mcd_list_print_coupons a { color: #FFF; text-decoration: none; text-indent: 45px; width: 100px !important; font-weight: bold; line-height: 32px; font-size: 16px; }
+.mcd_cl_print_page_loading { background: url('../images/ajax-loader-print-loading.gif') no-repeat !important; }
+/**********************
+Print Page Styling
+**********************/
+#mcd_cl_print_header { padding: 30px; background: #EEE; border-bottom: 2px dashed #DDD; }
+	#mcd_cl_print_header h1 { font-size: 30px; padding: 0 0 5px 0; }
+	#mcd_logo_container { padding: 0 0 20px 0; text-align: center; }
+	#mcd_list_print_page_actions { list-style: none; margin: 0; font-size: 14px; padding: 0 0 20px 0; }
+		#mcd_list_print_page_actions li:first-child { padding: 0 0 0 50px; background: url('../images/print_icon.png') no-repeat; line-height: 32px; }
+		#mcd_cl_print_list_button { color: #000; cursor: pointer; }
+	
+#mcd_cl_print_container { padding: 30px; }
+	#mcd_cl_print_container h2 { font-size: 24px; color: #33C6F4; padding: 20px 0 5px 0; margin: 0 0 10px 0; border-bottom: 1px solid #33C6F4; }
+
+#mcd_cl_user_added_coupons_list { display: none; margin: 10px 0 0 0; padding: 5px; border: 1px dashed #DDD; }
+#mcd_cl_user_added_coupons_list li { list-style: none; line-height: 20px; }
+
+#mcd_cl_print_footer { background: #EEE; border-top: 2px dashed #DDD; min-height: 200px; padding: 30px;  }
+#fancybox-overlay, #fancybox-wrap { z-index: 30000 !important; }
+body .mcd_cl_hide_all { display: none !important; }
+
+
+
